@@ -1,0 +1,125 @@
+{
+  "version": 2,
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "defaultProject": "homeremote",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "styled-components",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "styled-components"
+      },
+      "library": {
+        "style": "styled-components",
+        "linter": "eslint"
+      }
+    }
+  },
+  "projects": {
+    "homeremote": {
+      "root": "apps/homeremote",
+      "sourceRoot": "apps/homeremote/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/homeremote",
+            "index": "apps/homeremote/src/index.html",
+            "main": "apps/homeremote/src/main.tsx",
+            "polyfills": "apps/homeremote/src/polyfills.ts",
+            "tsConfig": "apps/homeremote/tsconfig.app.json",
+            "assets": [
+              "apps/homeremote/src/favicon.ico",
+              "apps/homeremote/src/assets"
+            ],
+            "styles": [],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/homeremote/src/environments/environment.ts",
+                  "with": "apps/homeremote/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "homeremote:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "homeremote:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/homeremote/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/homeremote"],
+          "options": {
+            "jestConfig": "apps/homeremote/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "homeremote-e2e": {
+      "root": "apps/homeremote-e2e",
+      "sourceRoot": "apps/homeremote-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/homeremote-e2e/cypress.json",
+            "tsConfig": "apps/homeremote-e2e/tsconfig.e2e.json",
+            "devServerTarget": "homeremote:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "homeremote:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/homeremote-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  }
+}
