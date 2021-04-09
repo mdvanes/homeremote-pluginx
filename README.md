@@ -15,15 +15,19 @@ localhost:4400
 
 # Some steps I took
 
-* study ... (Udemy)
-* TODO view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8
+* study https://www.udemy.com/course/microfrontend-course/learn/lecture/23206924#overview (Udemy)
+* TODO view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8 (see also @angular-architects/module-federation)
+* TODO read Angular Module Federation with Nx https://www.angulararchitects.io/aktuelles/using-module-federation-with-monorepos-and-angular/ 
 * TODO study https://egghead.io/courses/scale-react-development-with-nx-4038
 * TODO read https://micro-frontends.org/
 * Add storybook and "ui" lib
+* Add (remote) apps: `npm run nx g @nrwl/react:component DockerControls` `npm run nx g @nrwl/react:component DomoticzControls`
 * Add a button component: `npm run nx g @nrwl/react:component button -- --project=ui --export`
+* TODO how always add storybook file when generating a component?
 * TODO How run unit tests? linting? publishing (per module/component)?
-* TODO build complex app without module federation
-* TODO How do micro frontends/webpack 5 module federation? E.g. with 2 organisms.
+* TODO build complex app without module federation (2 remote apps (list of docker containers, list of domoticz devices) each with at least 1 UI component (button), in 1 container app (homeremote) )
+* TODO How do micro frontends/webpack 5 module federation? E.g. with 2 organisms (list of docker containers, list of domoticz devices). 
+* TODO mix Angular, React and Reason/Rust
 
 ## Adding capabilities to your workspace
 

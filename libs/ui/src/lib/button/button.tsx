@@ -1,17 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-/* eslint-disable-next-line */
-export interface ButtonProps {}
+export interface ButtonProps {
+  label: string;
+}
 
 const StyledButton = styled.button`
-  color: green;
+background-color: blue;
+  border: none;
+  text-transform: uppercase;
 `;
 
-export function Button(props: ButtonProps) {
+export function Button({ label }: ButtonProps) {
   return (
-    <StyledButton onClick={() => alert("Not yet implemented!")}>
-      Click!
+    <StyledButton onClick={() => alert('Not yet implemented!')}>
+      {label}
     </StyledButton>
   );
 }
