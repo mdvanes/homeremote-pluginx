@@ -2,6 +2,7 @@ import React from 'react';
 
 // import styled from 'styled-components';
 import DockerControls from './docker-controls/docker-controls';
+import DomoticzControls from './domoticz-controls/domoticz-controls';
 // import DockerControls from '@homeremote-pluginx/homeremote/';
 
 // import { ReactComponent as Logo } from './logo.svg';
@@ -11,7 +12,7 @@ export function App() {
   return (
     <div style={{ display: 'flex' }}>
       <DockerControls />
-      <DockerControls />
+      <DomoticzControls />
     </div>
   );
 }
