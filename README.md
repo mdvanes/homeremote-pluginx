@@ -8,6 +8,11 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
+```
+npm run nx storybook
+localhost:4400
+```
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
