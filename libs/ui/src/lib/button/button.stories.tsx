@@ -7,5 +7,5 @@ export default {
 };
 
 export const primary = () => {
-  return <Button />;
+  return <Button label="Click" />;
 };
