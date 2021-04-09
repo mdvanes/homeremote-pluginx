@@ -13,6 +13,18 @@ npm run nx storybook
 localhost:4400
 ```
 
+# Some steps I took
+
+* study ... (Udemy)
+* TODO view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8
+* TODO study https://egghead.io/courses/scale-react-development-with-nx-4038
+* TODO read https://micro-frontends.org/
+* Add storybook and "ui" lib
+* Add a button component: `npm run nx g @nrwl/react:component button -- --project=ui --export`
+* TODO How run unit tests? linting? publishing (per module/component)?
+* TODO build complex app without module federation
+* TODO How do micro frontends/webpack 5 module federation? E.g. with 2 organisms.
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
