@@ -9,6 +9,10 @@ export interface ToggleButtonProps {
 
 const StyledDiv = styled.div`
   display: flex;
+  margin: 0.5rem 0;
+  background-color: #eee;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
 `;
 
 export function ToggleButton({ label }: ToggleButtonProps) {

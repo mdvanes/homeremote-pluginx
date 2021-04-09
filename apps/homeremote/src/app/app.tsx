@@ -9,7 +9,8 @@ import DockerControls from './docker-controls/docker-controls';
 
 export function App() {
   return (
-    <div>
+    <div style={{ display: 'flex' }}>
+      <DockerControls />
       <DockerControls />
     </div>
   );
