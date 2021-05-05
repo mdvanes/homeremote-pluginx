@@ -49,6 +49,11 @@ localhost:4400
   - repeat for Angular components app: 
     - `yarn add -D @nrwl/angular`
     - `npx nx g @nrwl/angular:app new-stream-player`
+  - Now try to customize webpack config to enable module federation. This is hard because Nx currently does not support Webpack 5 (https://github.com/nrwl/nx/issues/3116), so the existing webpack config "@nrwl/react/plugins/webpack" can't be extended.
+    - Set workspace.json > homeremote > webpackConfig from "@nrwl/react/plugins/webpack" to "apps/homeremote/webpackConfig.js"
+    - For now, just copy the contents of "@nrwl/react/plugins/webpack" to "apps/homeremote/webpackConfig.js" and add a console.log `console.log("### using custom webpack config ###");` to test if the custom config is used.
+    - Test if serve uses the new config: `npx nx serve homeremote`
+    - 
 - ONGOING study https://www.udemy.com/course/microfrontend-course/learn/lecture/23206924#overview (Udemy)
 - ONGOING view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8 (see also @angular-architects/module-federation)
 - TODO read https://micro-frontends.org/
