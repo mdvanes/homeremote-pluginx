@@ -8,6 +8,22 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
 
+(Goal) Architecture:
+
+Host app: apps/homeremote (React)
+Remote apps: 
+ - apps/new-docker-controls (React)
+
+Start the app(s):
+
+```
+nvm use
+npm start
+http://localhost:4200/
+```
+
+Start storybook:
+
 ```
 npm run nx storybook
 localhost:4400
@@ -15,19 +31,23 @@ localhost:4400
 
 # Some steps I took
 
-* study https://www.udemy.com/course/microfrontend-course/learn/lecture/23206924#overview (Udemy)
-* TODO view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8 (see also @angular-architects/module-federation)
-* TODO read Angular Module Federation with Nx https://www.angulararchitects.io/aktuelles/using-module-federation-with-monorepos-and-angular/ 
-* TODO study https://egghead.io/courses/scale-react-development-with-nx-4038
-* TODO read https://micro-frontends.org/
-* Add storybook and "ui" lib
-* Add (remote) apps: `npm run nx g @nrwl/react:component DockerControls` `npm run nx g @nrwl/react:component DomoticzControls`
-* Add a button component: `npm run nx g @nrwl/react:component button -- --project=ui --export`
-* TODO how always add storybook file when generating a component?
-* TODO How run unit tests? linting? publishing (per module/component)?
-* TODO build complex app without module federation (2 remote apps (list of docker containers, list of domoticz devices) each with at least 1 UI component (button), in 1 container app (homeremote) )
-* TODO How do micro frontends/webpack 5 module federation? E.g. with 2 organisms (list of docker containers, list of domoticz devices). 
-* TODO mix Angular, React and Reason/Rust
+- Add storybook and "ui" lib
+- Add a button component: `npm run nx g @nrwl/react:component button -- --project=ui --export`
+- Add (remote) apps: `npm run nx g @nrwl/react:component DockerControls` `npm run nx g @nrwl/react:component DomoticzControls`
+- build complex app without module federation (2 remote apps (list of docker containers, list of domoticz devices) each with at least 1 UI component (button), in 1 container app (homeremote) )
+- ONGOING How do micro frontends/webpack 5 module federation? E.g. with 2 organisms (list of docker containers, list of domoticz devices). 
+  - add a new (React app): `npx nx g @nrwl/react:app new-docker-controls`
+  - start it: `npx nx serve new-docker-controls`
+  - make it start on different port: modify workspace.json
+- ONGOING study https://www.udemy.com/course/microfrontend-course/learn/lecture/23206924#overview (Udemy)
+- ONGOING view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8 (see also @angular-architects/module-federation)
+- TODO read https://micro-frontends.org/
+- TODO read Angular Module Federation with Nx https://www.angulararchitects.io/aktuelles/using-module-federation-with-monorepos-and-angular/ 
+- TODO study https://egghead.io/courses/scale-react-development-with-nx-4038
+- TODO how always add storybook file when generating a component?
+- TODO How run unit tests? linting? publishing (per module/component)?
+- TODO mix Angular, React and Reason/Rust (see https://github.com/module-federation/module-federation-examples/tree/master/comprehensive-demo React + Svelte + Lit)
+- TODO remove apps/homeremote/src/app/docker-controls and rename apps/new-docker-controls to apps/docker-controls
 
 ## Adding capabilities to your workspace
 
