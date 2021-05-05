@@ -374,7 +374,8 @@
         "serve": {
           "executor": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "new-domoticz-controls:build"
+            "buildTarget": "new-domoticz-controls:build",
+            "port": 4202
           },
           "configurations": {
             "production": {
@@ -487,7 +488,8 @@
         "serve": {
           "executor": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "new-stream-player:build"
+            "browserTarget": "new-stream-player:build",
+            "port": 4203
           },
           "configurations": {
             "production": {
