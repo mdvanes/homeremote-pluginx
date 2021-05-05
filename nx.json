@@ -41,6 +41,11 @@
     "new-stream-player-e2e": {
       "tags": [],
       "implicitDependencies": ["new-stream-player"]
+    },
+    "homeremote-ng": { "tags": [] },
+    "homeremote-ng-e2e": {
+      "tags": [],
+      "implicitDependencies": ["homeremote-ng"]
     }
   }
 }
