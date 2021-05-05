@@ -58,6 +58,19 @@ localhost:4400
       - Serve fails because of dependency error
   - Wait until official support for Webpack 5, in the mean time try the workaround that only works for Angular.
     - Create a new host app that is Angular based: `npx nx g @nrwl/angular:app homeremote-ng`
+    - https://github.com/ebrehault/micro-frontend-with-nx
+    - create a new workspace with nx, because it MUST BE an angular workspace. Without it, there will be no angular.json in the root, and that prevents commands that depend on the Angular CLI like `ng add @angular-architects/module-federation --project homeremote-ng --port 4200` from working
+    - Create workspace `npx create-nx-workspace@latest homeremote-pluginx-v2`
+      - Select Angular App!!
+    - cd homeremote-pluginx-v2
+    - create host app: `yarn ng generate @nrwl/angular:application --name=homeremote`
+    - create remote app: `yarn ng generate @nrwl/angular:application --name=stream-player` and enable routing!!
+    - add a module like AdminPanelModule in stream-player, see https://github.com/ebrehault/micro-frontend-with-nx#setup-your-project
+    - Add module federation plugin: `yarn ng add @angular-architects/module-federation --project homeremote --port 4200`
+    - and `yarn ng add @angular-architects/module-federation --project stream-player --port 4201`
+    - add to package.json: `"resolutions": { "webpack": "5.0.0"}` and run `yarn`
+    - ??? the "add a module step" above has not been completed. Continue in homeremote-pluginx-v2
+    -
 - TODO reverse proxy instead of different port numbers, and running with a production build
 - ONGOING study https://www.udemy.com/course/microfrontend-course/learn/lecture/23206924#overview (Udemy)
 - ONGOING view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8 (see also @angular-architects/module-federation)
