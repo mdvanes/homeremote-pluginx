@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/apps/new-docker-controls',
     '<rootDir>/apps/new-domoticz-controls',
     '<rootDir>/apps/new-stream-player',
+    '<rootDir>/apps/homeremote-ng',
   ],
 };
