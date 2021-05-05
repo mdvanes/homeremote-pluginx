@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'new-stream-player';
+
+  dummyClick(name: string) {
+    alert(`dummy action: ${name}`);
+  }
 }
