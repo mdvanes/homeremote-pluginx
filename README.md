@@ -39,6 +39,10 @@ localhost:4400
   - add a new (React app): `npx nx g @nrwl/react:app new-docker-controls`
   - start it: `npx nx serve new-docker-controls`
   - make it start on different port: modify workspace.json, add `"port": 4201` under serve options
+  - repeat for Web components app: `npx nx g @nrwl/web:app new-domoticz-controls`
+  - repeat for Angular components app: 
+    - `yarn add -D @nrwl/angular`
+    - `npx nx g @nrwl/angular:app new-stream-player`
 - ONGOING study https://www.udemy.com/course/microfrontend-course/learn/lecture/23206924#overview (Udemy)
 - ONGOING view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8 (see also @angular-architects/module-federation)
 - TODO read https://micro-frontends.org/

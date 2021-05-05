@@ -3,5 +3,7 @@ module.exports = {
     '<rootDir>/apps/homeremote',
     '<rootDir>/libs/ui',
     '<rootDir>/apps/new-docker-controls',
+    '<rootDir>/apps/new-domoticz-controls',
+    '<rootDir>/apps/new-stream-player',
   ],
 };

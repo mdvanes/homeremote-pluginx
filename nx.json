@@ -1,18 +1,13 @@
 {
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "homeremote-pluginx",
   "tasksRunnerOptions": {
     "default": {
@@ -29,22 +24,23 @@
     }
   },
   "projects": {
-    "homeremote": {
-      "tags": []
-    },
-    "homeremote-e2e": {
-      "tags": [],
-      "implicitDependencies": ["homeremote"]
-    },
-    "ui": {
-      "tags": []
-    },
-    "new-docker-controls": {
-      "tags": []
-    },
+    "homeremote": { "tags": [] },
+    "homeremote-e2e": { "tags": [], "implicitDependencies": ["homeremote"] },
+    "ui": { "tags": [] },
+    "new-docker-controls": { "tags": [] },
     "new-docker-controls-e2e": {
       "tags": [],
       "implicitDependencies": ["new-docker-controls"]
+    },
+    "new-domoticz-controls": { "tags": [] },
+    "new-domoticz-controls-e2e": {
+      "tags": [],
+      "implicitDependencies": ["new-domoticz-controls"]
+    },
+    "new-stream-player": { "tags": [] },
+    "new-stream-player-e2e": {
+      "tags": [],
+      "implicitDependencies": ["new-stream-player"]
     }
   }
 }
