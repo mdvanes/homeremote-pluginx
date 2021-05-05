@@ -223,7 +223,8 @@
         "serve": {
           "executor": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "new-docker-controls:build"
+            "buildTarget": "new-docker-controls:build",
+            "port": 4201
           },
           "configurations": {
             "production": {
