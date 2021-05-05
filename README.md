@@ -10,9 +10,11 @@ This project was generated using [Nx](https://nx.dev).
 
 (Goal) Architecture:
 
-Host app: apps/homeremote (React)
+Host app: apps/homeremote (React, port 4200)
 Remote apps: 
- - apps/new-docker-controls (React)
+ - apps/new-docker-controls (React, port 4201)
+ - apps/new-domoticz-controls (Web Components, port 4202)
+ - apps/new-stream-player (Angular, port 4203)
 
 Start the app(s):
 
@@ -20,6 +22,10 @@ Start the app(s):
 nvm use
 npm start
 http://localhost:4200/
+
+// or 
+npx nx serve new-docker-controls
+http://localhost:4201/
 ```
 
 Start storybook:
