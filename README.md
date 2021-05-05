@@ -38,7 +38,7 @@ localhost:4400
 - ONGOING How do micro frontends/webpack 5 module federation? E.g. with 2 organisms (list of docker containers, list of domoticz devices). 
   - add a new (React app): `npx nx g @nrwl/react:app new-docker-controls`
   - start it: `npx nx serve new-docker-controls`
-  - make it start on different port: modify workspace.json
+  - make it start on different port: modify workspace.json, add `"port": 4201` under serve options
 - ONGOING study https://www.udemy.com/course/microfrontend-course/learn/lecture/23206924#overview (Udemy)
 - ONGOING view Angular Module Federation (via Bjorn) https://www.youtube.com/watch?v=Fg2pX79YNa8 (see also @angular-architects/module-federation)
 - TODO read https://micro-frontends.org/
